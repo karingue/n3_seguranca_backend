@@ -1,9 +1,28 @@
 server:
     port: 8081
 
+# http://localhost:8081/swagger-ui/index.html#/
 spring:
     application:
         name: "n3_seguranca_backend"
+
+    datasource:
+        driverClassName: "org.h2.Driver"
+        username: "sa"
+        password: ""
+        url: "jdbc:h2:file:C:/Users/diego/Documentos"
+
+    jpa:
+        database-platform: "org.hibernate.dialect.H2Dialect"
+        show-sql: true
+        hibernate:
+            ddl-auto: "update"
+
+    h2:
+        console:
+            enabled: true
+            path: "/h2-console"
+
 
     security:
         oauth2:
